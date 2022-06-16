@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 
 class Counter extends Component {
   constructor(props) {
+    //  继承父类this对象
     super(props);
+    //  绑定this, onClick调用的是一个函数,相当于一个中间变量, 用于防止this指针出错
     this.incrementAsync = this.incrementAsync.bind(this);
     this.incrementIfOdd = this.incrementIfOdd.bind(this);
   }
 
+  //  increase if odd number
   incrementIfOdd() {
     if (this.props.value % 2 !== 0) {
       this.props.onIncrement()

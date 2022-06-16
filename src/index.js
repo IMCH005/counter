@@ -17,4 +17,5 @@ const render = () => ReactDOM.render(
 )
 
 render()
+//  subscribe state
 store.subscribe(render)
